@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhdbr663gbjt5"]
+
+[ext_resource type="Script" uid="uid://dx0mcwavxrpc6" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://4wwj6fm2q0bk" path="res://Assets/Sprites/tile_0006.png" id="2_cvnsp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6t5aa"]
+radius = 12.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_cvnsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-12, 11)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("2_cvnsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-12, 11)
+shape = SubResource("CircleShape2D_6t5aa")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
